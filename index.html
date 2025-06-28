@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	 <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+	 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+
+            // Mobile Menu Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .perspective-1000 {
+                perspective: 1000px;
+            }
+            .transform-style-preserve-3d {
+                transform-style: preserve-3d;
+            }
+            .backface-hidden {
+                backface-visibility: hidden;
+            }
+        }
+    </style>
+	<title></title>
+</head>
+<body>
+
+<header data-aos="zoom-in" id="main-header" class="fixed w-full z-50 bg-transparent text-white header-transition">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+            <div class="flex items-center justify-between">
+                <!-- Logo Section -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold flex items-center text-orange-300">
+                        The Cleaners
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex space-x-10 text-lg">
+                    <a href="#services" class="hover:text-white-300 transition-all text-orange-300">Serviços</a>
+                    <a href="#about" class="hover:text-white-300 transition-all text-orange-300">Quem Somos</a>
+                    <a href="#contact" class="hover:text-white-300 transition-all text-orange-300">Contactos</a>
+                </nav>
+
+              
+
+                <!-- Mobile Menu Button (for smaller screens) -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden mt-5 hidden space-y-4 bg-primary/90 p-4 rounded-lg">
+                <a href="#services" class="block text-lg hover:text-gray-300 transition-all">Serviços</a>
+                <a href="#about" class="block text-lg hover:text-gray-300 transition-all">Sobre Nós</a>
+                <a href="#contact" class="block text-lg hover:text-gray-300 transition-all">Contactos</a>
+            </div>
+        </div>
+    </header>
+
+<div data-aos="zoom-in" class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+  <div class="absolute inset-0">
+    <img data-aos="zoom-in" src="img4.png"/>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+  </div>
+  
+  <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+    <h1 class="text-5xl font-bold leading-tight mb-4 animate__animated  animate__fadeInRight animate__delay-2s">The cleaners - solucões de limpeza </h1>
+    <p class="text-lg text-gray-300 mb-8 animate__animated   animate__fadeInRight animate__delay-2s">Somos a mais especializada empresa de limpeza do mercado angolano.</p>
+    <a href="#" class="bg-orange-400 text-white-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Saber Mais</a>
+  </div>
+</div>
+
+<section data-aos="zoom-in" class="overflow-hidden bg-white py-8 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Quem Somos</p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Somos a The Cleaners uma empresa especializada em limpezas, temos para si serviços de limpeza que variam desde casa e vão até alimpezas de veiculos.</p>
+          <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+
+ 	 <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-1 top-1 h-5 w-5 text-orange-400 fill-current" viewBox="0 0 20 20">
+        <path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/>
+      </svg>
+              	Cuidadosos
+              </dt>
+              <dd class="inline">Limpamos com todo o cuidado para não danificarmos nada.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+              	 <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-1 top-1 h-5 w-5 text-orange-400 fill-current" viewBox="0 0 20 20">
+        <path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/>
+      </svg>
+               
+                Rápidos
+              </dt>
+              <dd class="inline">Limpamos de forma rápida sem levar muito tempo.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+              	
+ 	 <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-1 top-1 h-5 w-5 text-orange-400 fill-current" viewBox="0 0 20 20">
+        <path d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/>
+      </svg>
+            Eficientes
+              </dt>
+              <dd class="inline">Somos efientes a limpar qualquer tipo de sujidade com os mehores produtos do mercado.
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <div class="mt-10 flex items-center gap-x-6">
+          <a href="#"
+            class="rounded-md bg-orange-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Contacte-Nós
+          </a>
+        </div>
+      </div><img src="img5.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8 ">
+	  <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">Nossos Serviços</h1>
+
+	<div class="max-w-7xl mx-auto flex justify-center ">
+    
+        <div class="">
+            <!-- Product Card 1 -->
+            <div data-aos="zoom-in" class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ">
+                <div class="relative overflow-hidden h-80">
+                    <img src="img1.png" 
+                         alt="Smart Watch" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4">
+                        <button class="bg-white/90 text-gray-800 p-2 rounded-full shadow-md transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500 hover:text-white">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <button class="w-full bg-orange-400 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center gap-2">
+                            <i class="fas fa-shopping-cart"></i> Saber Mais
+                        </button>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="text-lg font-bold text-gray-800">Limpeza de Casa</h2>
+                            <p class="text-gray-500 text-sm">Falazemos a limpeza do seu lar em todos s corpartimentos incluidos electodomesticos.</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex items-center">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<br><br>
+            <!-- Product Card 2 -->
+            <div data-aos="zoom-in" class="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                <div class="relative overflow-hidden h-80">
+                    <img src="img3.png" 
+                         alt="Wireless Headphones" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4">
+                        <button class="bg-white/90 text-gray-800 p-2 rounded-full shadow-md transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500 hover:text-white">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <button class="w-full bg-orange-400 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center gap-2">
+                            <i class="fas fa-shopping-cart"></i> Saber Mais
+                        </button>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h2 class="text-lg font-bold text-gray-800">Limpeza de Automoveis</h2>
+                            <p class="text-gray-500 text-sm">Fazemos a limpeza do completa seu autmovel, incluindo aspiração.</p>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex items-center">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<div data-aos="zoom-in" class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div class="mt-8 overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="p-6 mr-2  sm:rounded-lg">
+                    <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
+                        Contacte-Nós
+                    </h1>
+                    <p class="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
+                        Entre em contacto connosco para solicitar os nossos serviços 
+                    </p>
+
+                    
+                    <div class="flex items-center mt-2 text-gray-600 dark:text-gray-400">
+                        
+                        
+                    </div>
+                </div>
+
+                <form action="https://fabform.io/f/xxxxx" method="post" class="p-6 flex flex-col justify-center">
+                    <div class="flex flex-col">
+                        <label for="name" class="hidden">Nome Completo</label>
+                        <input type="name" name="name" id="name" placeholder="Nome Completo" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
+                    </div>
+
+                    <div class="flex flex-col mt-2">
+                        <label for="email" class="hidden">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none">
+                    </div>
+
+                    <div class="flex flex-col mt-2">
+                        <label for="message" class="hidden">Mensagem</label>
+                        <textarea name="message" id="message" placeholder="Mensagem" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="md:w-32 bg-orange-400 hover:bg-orange-400 text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
+                        Enviar
+                    </button>
+                     
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

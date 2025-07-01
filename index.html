@@ -237,7 +237,7 @@
 
   <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class="relative h-96 overflow-hidden rounded-lg md:h-136">
+    <div class="relative h-146 overflow-hidden rounded-lg md:h-176">
       <!-- Item 1 -->
       <div class="hidden duration-1000 ease-in-out" data-carousel-item>
         <div class="flex flex-nowrap sm:flex-wrap justify-center gap-8 px-1 mt-10 overflow-x-auto">
@@ -286,7 +286,7 @@
       </span>
     </button>
   </div>
-  <br><br><br>
+<br>
 </section>
 
 
@@ -374,6 +374,17 @@
   </div>
 
 </footer>
+
+<script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+  });
+</script>
 
 <script src="Js.js">
 
